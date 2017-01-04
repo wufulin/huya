@@ -26,7 +26,7 @@ input,select,option{outline:none}
 .wraper{width: 100%;height: 100%;opacity: 0}
 .wraper-show{-webkit-animation: opShow .5s linear forwards;}
 .container{overflow: hidden;-webkit-backface-visibility:hidden;background: url(../images/bg.jpg) left bottom no-repeat;background-size: 100% 100%;}
-.fy-tips{width: 100%;height: 100%;background: url(http://game.gtimg.cn/images/up/act/a20160318paper/fanye_tips.png) left bottom no-repeat;background-size: 100% 100%;z-index: 80;top: 0;left: 0}
+.fy-tips{width: 100%;height: 100%;background: url(../images/fanye-tips1.png) left bottom no-repeat;background-size: 100% 100%;z-index: 80;top: 0;left: 0}
 .section-box{width: 100%;overflow: hidden;margin: 0 auto}
 .section{position: absolute;top: 0;left: 0;display: none}
 .z5{z-index: 5;display:block;}
