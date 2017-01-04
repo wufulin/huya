@@ -25,7 +25,7 @@ input,select,option{outline:none}
 /*wraper*/
 .wraper{width: 100%;height: 100%;opacity: 0}
 .wraper-show{-webkit-animation: opShow .5s linear forwards;}
-.container{overflow: hidden;-webkit-backface-visibility:hidden;background: url(http://game.gtimg.cn/images/up/act/a20160318paper/bg.jpg) left bottom no-repeat;background-size: 100% 100%;}
+.container{overflow: hidden;-webkit-backface-visibility:hidden;background: url(../images/bg.jpg) left bottom no-repeat;background-size: 100% 100%;}
 .fy-tips{width: 100%;height: 100%;background: url(http://game.gtimg.cn/images/up/act/a20160318paper/fanye_tips.png) left bottom no-repeat;background-size: 100% 100%;z-index: 80;top: 0;left: 0}
 .section-box{width: 100%;overflow: hidden;margin: 0 auto}
 .section{position: absolute;top: 0;left: 0;display: none}
@@ -45,11 +45,6 @@ input,select,option{outline:none}
 	width: 285px;
 	height: 499px;
 	position: relative;
-	/*top: 50%;
-	left: 50%;*/
-	/*margin-top: -285px;
-	margin-left: -142px;*/
-	/*-webkit-transform: translate3d(-53%,-50%,0);*/
 	-webkit-transform-origin: 0 0;
 }
 .main img{
@@ -57,15 +52,15 @@ input,select,option{outline:none}
 	height: 100%
 }
 .main-1{
-	background: url(http://game.gtimg.cn/images/up/act/a20160318paper/sec_1_none.png) center top no-repeat;
+	background: url(../images/sec1-bg-none.jpg) center top no-repeat;
 	background-size: 285px 499px;	
 }
 .main-2{
-	background: url(http://game.gtimg.cn/images/up/act/a20160318paper/sec_2_none.png) center top no-repeat;
+	background: url(../images/sec2-bg-none.jpg) center top no-repeat;
 	background-size: 285px 499px;	
 }
 .main-3{
-	background: url(http://game.gtimg.cn/images/up/act/a20160318paper/sec_3_none.png) center top no-repeat;
+	background: url(../images/sec3-bg-none.jpg) center top no-repeat;
 	background-size: 285px 499px;	
 }
 .main-4{
@@ -85,57 +80,53 @@ input,select,option{outline:none}
 	background-size: 285px 499px;	
 }
 
-/*#sec2-1{	
-	background: url("http://game.gtimg.cn/images/up/act/a20160318paper/a_1.jpg") 0 0 no-repeat;
-	background-size: 4836px 109px
-}
-#sec5-1{	
-	background: url("http://game.gtimg.cn/images/up/act/a20160318paper/5_1.jpg") 0 0 no-repeat;
-	background-size: 9537px 123px
-}
-#sec5-2{	
-	background: url("http://game.gtimg.cn/images/up/act/a20160318paper/5_2.jpg") 0 0 no-repeat;
-	background-size: 5943px 75px
-}
-#sec5-3{	
-	background: url("http://game.gtimg.cn/images/up/act/a20160318paper/5_3.jpg") 0 0 no-repeat;
-	background-size: 2184px 75px
-}*/
 /*main-1*/
 .main-1 .slogan{
 	width: 282px;
 	height: 233px;
 	top: 130px;
 	left: 1px;	
-	background: url(http://game.gtimg.cn/images/up/act/a20160318paper/sec_1_1.jpg) 0 0 no-repeat;
 	background-size: 282px 233px
 }
 .main-1 .slogan .slogan-logo{
 	opacity: 0;
-	width: 125px;
-	height: 125px;
-	top: 15px;
-	left: 80px;
-	background: url(http://game.gtimg.cn/images/up/act/a20160318paper/slogan_logo.png) 0 0 no-repeat;
-	background-size: 125px 125px;
+	width: 150px;
+	height: 150px;
+	top: 45px;
+	left: 50%;
+	margin-left: -75px;
+	background: url(../images/slogan-logo.png) 0 0 no-repeat;
+	background-size: 150px 150px;
 }
-.main-1 .slogan .slogan-txt{
+.main-1 .slogan .slogan-txt1{
 	opacity: 0;
-	width: 125px;
-	height: 80px;
-	top: 115px;
-	left: 80px;
-	background: url(http://game.gtimg.cn/images/up/act/a20160318paper/slogan_txt.png) 0 0 no-repeat;
-	background-size: 125px 80px;
+	width: 100px;
+	height: 15px;
+	top: 225px;
+	left: 50%;
+	margin-left: -50px;
+	background: url(../images/slogan-txt1.png) 0 0 no-repeat;
+	background-size: 100px 15px;
+}
+.main-1 .slogan .slogan-txt2{
+	opacity: 0;
+	width: 100px;
+	height: 15px;
+	top: 242px;
+	left: 50%;
+	margin-left: -50px;
+	background: url(../images/slogan-txt2.png) 0 0 no-repeat;
+	background-size: 100px 15px;
 }
 .main-1 .slogan .slogan-copyright{
 	opacity: 0;
-	width: 125px;
-	height: 38px;
-	top: 185px;
-	left: 77px;
-	background: url(http://game.gtimg.cn/images/up/act/a20160318paper/slogan_copyright.png) 0 0 no-repeat;
-	background-size: 125px 38px;
+	width: 72px;
+	height: 20px;
+	top: 285px;
+	left: 50%;
+	margin-left: -36px;
+	background: url(../images/slogan-copyright-white.png) 0 0 no-repeat;
+	background-size: 72px 20px;
 }
 .main-1 .slogan .flower{
 	opacity: 0;
@@ -155,7 +146,10 @@ input,select,option{outline:none}
 .z5 .main-1 .slogan-box{
 	-webkit-animation: sloganboxAni 2s 2s ease-in forwards;
 }
-.z5 .main-1 .slogan .slogan-txt{
+.z5 .main-1 .slogan .slogan-txt1{
+	-webkit-animation: txtAni 6s linear forwards infinite;
+}
+.z5 .main-1 .slogan .slogan-txt2{
 	-webkit-animation: txtAni 6s linear forwards infinite;
 }
 .z5 .main-1 .slogan .slogan-copyright{
@@ -253,20 +247,20 @@ input,select,option{outline:none}
 }
 /*main-2*/
 .main-2 .sec-1{
-	width: 186px;
+	/*width: 186px;
 	height: 174px;
 	top: 104px;
 	left: 1px;
 	background: url(http://game.gtimg.cn/images/up/act/a20160318paper/pic/sec_2_1.jpg) 0 0 no-repeat;
-	background-size: 4836px 174px
+	background-size: 4836px 174px*/
 }
 .main-2 .sec-2{
-	width: 91px;
+	/*width: 91px;
 	height: 137px;
 	top: 290px;
 	left: 193px;
 	background: url(http://game.gtimg.cn/images/up/act/a20160318paper/pic/sec_2_2.jpg) 0 0 no-repeat;
-	background-size: 2366px 137px
+	background-size: 2366px 137px*/
 }
 
 
@@ -289,7 +283,7 @@ input,select,option{outline:none}
 }
 
 /*main-5*/
-.main-3 .sec-1{
+/*.main-3 .sec-1{
 	width: 187px;
 	height: 109px;
 	top: 117px;
@@ -312,66 +306,7 @@ input,select,option{outline:none}
 	left: 1px;
 	background: url(http://game.gtimg.cn/images/up/act/a20160318paper/pic/sec_5_3.jpg) 0 0 no-repeat;
 	background-size: 2184px 64px
-}
-.main-3 .dm{
-	width: 187px;
-	height: 109px;
-	top: 117px;
-	left: 97px;
-	overflow: hidden;
-	font-size: 12px;
-	color: #3e3d50;
-	text-shadow:0 0 2px #fff; 
-}
-.main-3 .dm span{display: block;position: absolute;}
-.main-3 .dm .t-1{
-	top: 1px;
-	right: -200px;
-	width: 200px;
-}
-.main-3 .dm .t-2{
-	top: 18px;
-	right: -200px;
-	width: 200px;
-}
-.main-3 .dm .t-3{
-	top: 36px;
-	right: -200px;
-	width: 200px;
-}
-.main-3 .dm .t-4{
-	top: 55px;
-	right: -200px;
-	width: 200px;
-}
-.main-3 .dm .t-5{
-	top: 70px;
-	right: -200px;
-	width: 200px;
-}
-.main-3 .dm .t-6{
-	top: 90px;
-	right: -200px;
-	width: 200px;
-}
-.z5 .main-3 .dm .t-1{
-	-webkit-animation: tAni1 3.5s linear infinite;
-}
-.z5 .main-3 .dm .t-2{
-	-webkit-animation: tAni2 4s 1s linear infinite;
-}
-.z5 .main-3 .dm .t-3{
-	-webkit-animation: tAni3 4.5s 5s linear infinite;
-}
-.z5 .main-3 .dm .t-4{
-	-webkit-animation: tAni4 3.7s 6s linear infinite;
-}
-.z5 .main-3 .dm .t-5{
-	-webkit-animation: tAni5 4.2s 2s linear infinite;
-}
-.z5 .main-3 .dm .t-6{
-	-webkit-animation: tAni6 3.8s 3.6s linear infinite;
-}
+}*/
 @-webkit-keyframes tAni1{
     0%{ 
         -webkit-transform:translate(0,0);
@@ -536,7 +471,7 @@ input,select,option{outline:none}
     }
 }
 
-.loading{font-size: 30px;color: #000;position: absolute;top: 0;left:0;z-index: 999;text-align: center;background: url(http://game.gtimg.cn/images/up/act/a20160318paper/bg.jpg) left bottom no-repeat;background-size: 100% 100%;}
+.loading{font-size: 30px;color: #000;position: absolute;top: 0;left:0;z-index: 999;text-align: center;background: url(../images/bg.jpg) left bottom no-repeat;background-size: 100% 100%;}
 .lo-txt{width: 100%;height: 160px;background: url(http://game.gtimg.cn/images/up/act/a20160318paper/loading.png) center 0 no-repeat;background-size: auto 100%;top: 50%;left: -5px;margin-top: -80px;}
 .loadTxt{width: 100%;color: #606070;position: absolute;top: -100px;font-size: 30px;left: 0;}
 
