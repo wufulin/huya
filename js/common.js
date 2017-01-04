@@ -43,9 +43,9 @@ $(".loading").css({
     "height":screenH
 })
 
-var basePath = "http://game.gtimg.cn/images/up/act/a20160318paper/";
-var loadingArr = ["sec_1.png","sec_2.png","sec_3.png","sec_4.png","sec_5.png","sec_6.png","sec_7.png","sec_1_none.png","sec_2_none.png","sec_3_none.png","sec_1_1.jpg","sec_1_2.jpg","sec_2_1.jpg","sec_2_2.jpg","sec_3_1.jpg","sec_3_2.jpg","sec_3_3.jpg","pic/sec_1_2.jpg","pic/sec_2_1.jpg","pic/sec_2_2.jpg","pic/sec_3_1.jpg","pic/sec_3_2.jpg","pic/sec_3_3.jpg"];
-var firstImgLoadArr = ["sec_4_none.png","sec_4_1.jpg","sec_4_1.jpg","sec_5_1.jpg","sec_5_2.jpg","sec_5_3.jpg","sec_6_1.jpg","sec_6_2.jpg","sec_6_3.jpg","pic/sec_4_1.jpg","pic/sec_4_2.jpg","sec_5_none.png","pic/sec_5_1.jpg","pic/sec_5_2.jpg","pic/sec_5_3.jpg","sec_6_none.png","pic/sec_6_1.jpg","pic/sec_6_2.jpg","pic/sec_6_3.jpg"];
+var basePath = "images/";
+var loadingArr = ["sec1-bg.jpg","sec2-bg.jpg","sec3-bg.jpg","sec4-bg.jpg","sec5-bg.jpg","sec1-bg-none.jpg","sec2-bg-none.jpg","sec3-bg-none.jpg","sec4-bg-none.jpg","sec5-bg-none.jpg"];
+var firstImgLoadArr = [];
 for (var i = 0; i < loadingArr.length; i++) {
     loadingArr[i] = basePath + loadingArr[i];
 }
