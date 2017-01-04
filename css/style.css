@@ -64,7 +64,7 @@ input,select,option{outline:none}
 	background-size: 285px 499px;	
 }
 .main-4{
-	background: url(http://game.gtimg.cn/images/up/act/a20160318paper/sec_4_none.png) center top no-repeat;
+	background: url(../images/sec4-bg-none.jpg) center top no-repeat;
 	background-size: 285px 499px;	
 }
 .main-5{
@@ -266,20 +266,20 @@ input,select,option{outline:none}
 
 /*main-4*/
 .main-4 .sec-1{
-	width: 282px;
+	/*width: 282px;
 	height: 76px;
 	top: 198px;
 	left: 1px;
 	background: url(http://game.gtimg.cn/images/up/act/a20160318paper/pic/sec_4_1.jpg) 0 0 no-repeat;
-	background-size: 14382px 76px
+	background-size: 14382px 76px*/
 }
 .main-4 .sec-2{
-	width: 90px;
+	/*width: 90px;
 	height: 37px;
 	top: 436px;
 	left: 1px;
 	background: url(http://game.gtimg.cn/images/up/act/a20160318paper/pic/sec_4_2.jpg) 0 0 no-repeat;
-	background-size: 360px 37px
+	background-size: 360px 37px*/
 }
 
 /*main-5*/
