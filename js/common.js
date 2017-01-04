@@ -4,8 +4,7 @@ var screenH = document.documentElement.clientHeight,
     containerBox = $(".container"),
     secBox = $(".section-box"),
     sec = $(".section"),
-    stimer = null,
-    flipBox = $(".flip-box"); 
+    flipBox = $(".flip-box");
 
 //设置高宽
 function resetSize(){
@@ -36,12 +35,13 @@ function pageScale(){
         }
     }   
     //$(".main").css({"-webkit-transform":"translate3d(-51.5%,-51%,0) scale("+ss*0.875+")"});
-    $(".main").css({"-webkit-transform":"scale("+ss*0.875+")"});
-};
+    $(".main").css({"-webkit-transform":"scale("+ss+")"});
+}
+
 $(".loading").css({
     "width":screenW,
     "height":screenH
-})
+});
 
 var basePath = "images/";
 var loadingArr = ["sec1-bg.jpg","sec2-bg.jpg","sec3-bg.jpg","sec4-bg.jpg","sec5-bg.jpg","sec1-bg-none.jpg","sec2-bg-none.jpg","sec3-bg-none.jpg","sec4-bg-none.jpg","sec5-bg-none.jpg"];
@@ -66,19 +66,20 @@ new mo.Loader(loadingArr, {
             },
             onComplete: function(time) {
             }
-        })
+        });
     }
-})  
+});
 
 
 $("#sec7-3").click(function(){
     $(".share-bg").show();
     $(".share-tips").show();
-})       
+});
+
 $(".share-bg").click(function(){
     $(this).hide();
     $(".share-tips").hide();
-})
+});
      
 
 //页面执行函数

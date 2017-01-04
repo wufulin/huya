@@ -130,8 +130,7 @@ var screenH = document.documentElement.clientHeight,
             return (window.devicePixelRatio || 1) / backingStore;
         };
         var ratio = getPixelRatio(ctx);
-        var
-            width = width,height = height,mX = width,mY = height,
+        var width = width,height = height,mX = width,mY = height,
             basemX = mX*(1-curlSize), basemY = mY*curlSize,sideLeft = false,
             off = $.browser.msie?canvas.offset():null,
             onCorner = false,
@@ -281,10 +280,6 @@ var screenH = document.documentElement.clientHeight,
                         clearTimeout(delayTimer);
                     }
                 }
-                // else if(nowPage == 7){
-                //   $(".share-bg").show();
-                //   $(".share-tips").show();                    
-                // } 
             }else{
                 if(nowPage>1){
                     onCorner = true;
@@ -312,7 +307,7 @@ var screenH = document.documentElement.clientHeight,
             }
             if(nowPage == 2){
                 clearInterval(aniTimer2);
-                clearInterval(aniTimer3); ;
+                clearInterval(aniTimer3);
             }
             if(nowPage == 3){
                 clearInterval(aniTimer9);
@@ -452,13 +447,17 @@ var screenH = document.documentElement.clientHeight,
                 ctx.drawImage(bgImg,0,0,screenW*ratio,screenH*ratio);
                 var img = images[0], r = $(img).data("flip.scale");
                 //ctx.drawImage(img,(width-img.width/2*ss*0.875)/2-img.width/2*ss*0.875*0.015,(height-img.height/2*ss*0.875)/2-img.height/2*ss*0.875*0.01,img.width/2*ss*0.875*ratio,img.height/2*ss*0.875*ratio);
-                ctx.drawImage(img,(width*ratio-img.width/2*ss*0.875*ratio)/2-img.width/2*ss*0.875*0.015*ratio,(height*ratio-img.height/2*ss*0.875*ratio)/2-img.height/2*ss*0.875*0.01*ratio,img.width/2*ss*0.875*ratio,img.height/2*ss*0.875*ratio);
+                ctx.drawImage(img,
+                    0,
+                    0,
+                    img.width/2*ss*1*ratio,
+                    img.height/2*ss*1*ratio);
                 lv = (width-img.width/2*ss*0.875)/2-img.width/2*ss*0.875*0.015;
                 tv = (height-img.height/2*ss*0.875)/2-img.height/2*ss*0.875*0.01;
                 $(".section").css({
-                    "top":tv,
-                    "left":lv
-                })
+                    "top":0,
+                    "left":0
+                });
 
                 if(mY && mX!=width) {
                     var m = 2,
@@ -571,7 +570,13 @@ var screenH = document.documentElement.clientHeight,
                         // ctx.drawImage(img,(width-img.width/2*ss*0.875)/2-img.width/2*ss*0.875*0.015,(height-img.height/2*ss*0.875)/2-img.height/2*ss*0.875*0.01,img.width/2*ss*0.875*ratio,img.height/2*ss*0.875*ratio);
 
                         ctx.drawImage(bgImg,0,0,screenW*ratio,screenH*ratio);
-                        ctx.drawImage(img,(width*ratio-img.width/2*ss*0.875*ratio)/2-img.width/2*ss*0.875*0.015*ratio,(height*ratio-img.height/2*ss*0.875*ratio)/2-img.height/2*ss*0.875*0.01*ratio,img.width/2*ss*0.875*ratio,img.height/2*ss*0.875*ratio);
+                        //var tmpW=(width*ratio-img.width/2*ss*0.875*ratio)/2-img.width/2*ss*0.875*0.015*ratio,
+                        //    tmpH=(height*ratio-img.height/2*ss*0.875*ratio)/2-img.height/2*ss*0.875*0.01*ratio;
+                        ctx.drawImage(img,
+                            0,
+                            0,
+                            img.width/2*ss*1*ratio,
+                            img.height/2*ss*1*ratio);
 
                         ctx.restore();
                         if($.browser.safari || $.browser.opera) {
@@ -639,7 +644,6 @@ function picAni(id,w,h,n,speed){
 }
 
 $("#sec1 .pic").hide();
-picAniA("sec1-2",112,72,18,150);
 function aniJudg(){
     $(".share-bg").hide();
     $(".share-tips").hide();
@@ -647,278 +651,21 @@ function aniJudg(){
     if(nowPage == 1){
         $(".fy-tips").show();
         $("#sec1 .pic").hide();
-        // clearInterval(aniTimer2);
-        // clearInterval(aniTimer3);
-        picAniA("sec1-2",112,72,18,150);//1
     }
     if(nowPage == 2){
         $(".fy-tips").show();
         $("#sec2 .pic").hide();
-        // clearInterval(aniTimer1);
-        // clearInterval(aniTimer8);
-        // clearInterval(aniTimer9);
-        // clearInterval(aniTimer10);
-        picAniB("sec2-1",186,174,26,120);//2
-        picAniC("sec2-2",91,137,26,120);//3
     }
     if(nowPage == 3){
         $(".fy-tips").show();
         $("#sec3 .pic").hide();
-        // clearInterval(aniTimer2);
-        // clearInterval(aniTimer3);
-        // clearInterval(aniTimer7);
-        // clearInterval(aniTimer8);
-        picAniI("sec3-1",187,109,51,100);//9
-        picAniJ("sec3-2",283,75,20,140);//10
-        picAniK("sec3-3",91,64,24,130);//11
     }
     if(nowPage == 4){
         $(".fy-tips").show();
         $("#sec4 .pic").hide();
-        // clearInterval(aniTimer9);
-        // clearInterval(aniTimer10);
-        // clearInterval(aniTimer11);
-        // clearInterval(aniTimer12);
-        // clearInterval(aniTimer13);
-        // clearInterval(aniTimer14);
-        picAniG("sec4-1",282,76,51,100);//7
-        picAniH("sec4-2",90,54,4,800);//8
     }
     if(nowPage == 5){
         $(".fy-tips").hide();
         $("#sec5 .pic").hide();
-        picAniL("sec5-1",282,109,6,800);//12
-        picAniM("sec5-2",91,51,26,120);//13
-        picAniN("sec5-3",90,64,26,120);//14
     }
-}
-
-// $("#sec1 .pic").hide();
-// picAni("sec1-2",112,72,18,100); 
-
-
-
-function picAniA(id,w,h,n,speed){
-    var box = $("#"+id),
-        picW = w,
-        picH = h,
-        picN = n,
-        aN = 0;
-    box.attr({"style":"background-position:0px 0px"});
-    function personAni(){
-        box.attr({"style":"background-position:-"+w*aN+"px 0px"});
-        aN++;
-        if(aN == picN){
-            aN=0
-        }
-    }
-    aniTimer1 = setInterval(personAni,speed);
-}
-function picAniB(id,w,h,n,speed){
-    var box = $("#"+id),
-        picW = w,
-        picH = h,
-        picN = n,
-        aN = 0;
-    box.attr({"style":"background-position:0px 0px"});
-    function personAni(){
-        box.attr({"style":"background-position:-"+w*aN+"px 0px"});
-        aN++;
-        if(aN == picN){
-            aN=0
-        }
-    }
-    aniTimer2 = setInterval(personAni,speed);
-}
-function picAniC(id,w,h,n,speed){
-    var box = $("#"+id),
-        picW = w,
-        picH = h,
-        picN = n,
-        aN = 0;
-    box.attr({"style":"background-position:0px 0px"});
-    function personAni(){
-        box.attr({"style":"background-position:-"+w*aN+"px 0px"});
-        aN++;
-        if(aN == picN){
-            aN=0
-        }
-    }
-    aniTimer3 = setInterval(personAni,speed);
-}
-function picAniD(id,w,h,n,speed){
-    var box = $("#"+id),
-        picW = w,
-        picH = h,
-        picN = n,
-        aN = 0;
-    box.attr({"style":"background-position:0px 0px"});
-    function personAni(){
-        box.attr({"style":"background-position:-"+w*aN+"px 0px"});
-        aN++;
-        if(aN == picN){
-            aN=0
-        }
-    }
-    aniTimer4 = setInterval(personAni,speed);
-}
-function picAniE(id,w,h,n,speed){
-    var box = $("#"+id),
-        picW = w,
-        picH = h,
-        picN = n,
-        aN = 0;
-    box.attr({"style":"background-position:0px 0px"});
-    function personAni(){
-        box.attr({"style":"background-position:-"+w*aN+"px 0px"});
-        aN++;
-        if(aN == picN){
-            aN=0
-        }
-    }
-    aniTimer5 = setInterval(personAni,speed);
-}
-function picAniF(id,w,h,n,speed){
-    var box = $("#"+id),
-        picW = w,
-        picH = h,
-        picN = n,
-        aN = 0;
-    box.attr({"style":"background-position:0px 0px"});
-    function personAni(){
-        box.attr({"style":"background-position:-"+w*aN+"px 0px"});
-        aN++;
-        if(aN == picN){
-            aN=0
-        }
-    }
-    aniTimer6 = setInterval(personAni,speed);
-}
-function picAniG(id,w,h,n,speed){
-    var box = $("#"+id),
-        picW = w,
-        picH = h,
-        picN = n,
-        aN = 0;
-    box.attr({"style":"background-position:0px 0px"});
-    function personAni(){
-        box.attr({"style":"background-position:-"+w*aN+"px 0px"});
-        aN++;
-        if(aN == picN){
-            aN=0
-        }
-    }
-    aniTimer7 = setInterval(personAni,speed);
-}
-function picAniH(id,w,h,n,speed){
-    var box = $("#"+id),
-        picW = w,
-        picH = h,
-        picN = n,
-        aN = 0;
-    box.attr({"style":"background-position:0px 0px"});
-    function personAni(){
-        box.attr({"style":"background-position:-"+w*aN+"px 0px"});
-        aN++;
-        if(aN == picN){
-            aN=0
-        }
-    }
-    aniTimer8 = setInterval(personAni,speed);
-}
-function picAniI(id,w,h,n,speed){
-    var box = $("#"+id),
-        picW = w,
-        picH = h,
-        picN = n,
-        aN = 0;
-    box.attr({"style":"background-position:0px 0px"});
-    function personAni(){
-        box.attr({"style":"background-position:-"+w*aN+"px 0px"});
-        aN++;
-        if(aN == picN){
-            aN=0
-        }
-    }
-    aniTimer9 = setInterval(personAni,speed);
-}
-function picAniJ(id,w,h,n,speed){
-    var box = $("#"+id),
-        picW = w,
-        picH = h,
-        picN = n,
-        aN = 0;
-    box.attr({"style":"background-position:0px 0px"});
-    function personAni(){
-        box.attr({"style":"background-position:-"+w*aN+"px 0px"});
-        aN++;
-        if(aN == picN){
-            aN=0
-        }
-    }
-    aniTimer10 = setInterval(personAni,speed);
-}
-function picAniK(id,w,h,n,speed){
-    var box = $("#"+id),
-        picW = w,
-        picH = h,
-        picN = n,
-        aN = 0;
-    box.attr({"style":"background-position:0px 0px"});
-    function personAni(){
-        box.attr({"style":"background-position:-"+w*aN+"px 0px"});
-        aN++;
-        if(aN == picN){
-            aN=0
-        }
-    }
-    aniTimer11 = setInterval(personAni,speed);
-}
-function picAniL(id,w,h,n,speed){
-    var box = $("#"+id),
-        picW = w,
-        picH = h,
-        picN = n,
-        aN = 0;
-    box.attr({"style":"background-position:0px 0px"});
-    function personAni(){
-        box.attr({"style":"background-position:-"+w*aN+"px 0px"});
-        aN++;
-        if(aN == picN){
-            aN=0
-        }
-    }
-    aniTimer12 = setInterval(personAni,speed);
-}
-function picAniM(id,w,h,n,speed){
-    var box = $("#"+id),
-        picW = w,
-        picH = h,
-        picN = n,
-        aN = 0;
-    box.attr({"style":"background-position:0px 0px"});
-    function personAni(){
-        box.attr({"style":"background-position:-"+w*aN+"px 0px"});
-        aN++;
-        if(aN == picN){
-            aN=0
-        }
-    }
-    aniTimer13 = setInterval(personAni,speed);
-}
-function picAniN(id,w,h,n,speed){
-    var box = $("#"+id),
-        picW = w,
-        picH = h,
-        picN = n,
-        aN = 0;
-    box.attr({"style":"background-position:0px 0px"});
-    function personAni(){
-        box.attr({"style":"background-position:-"+w*aN+"px 0px"});
-        aN++;
-        if(aN == picN){
-            aN=0
-        }
-    }
-    aniTimer14 = setInterval(personAni,speed);
 }
