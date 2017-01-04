@@ -15,7 +15,6 @@ function resetSize(){
     sec.css({"width":screenW,"height":screenH});    
     flipBox.css({"width":screenW,"height":screenH});
     $(".fy-tips").css({"width":screenW,"height":screenH});
-    //$(".shadow").css({"width":screenW,"height":screenH}); 
 }
 
 function pageScale(){
@@ -75,7 +74,6 @@ new mo.Loader(loadingArr, {
 $("#sec7-3").click(function(){
     $(".share-bg").show();
     $(".share-tips").show();
-    pgvSendClick({hottag:'up2016.a20160318paper.show.sharetips'});
 })       
 $(".share-bg").click(function(){
     $(this).hide();
@@ -87,9 +85,6 @@ $(".share-bg").click(function(){
 function pageFun(){
     resetSize();
     pageScale();
-    // var swiper = new Swiper('.swiper-container', {
-    //     direction: 'vertical'
-    // });
 }
 pageFun();
 
@@ -128,14 +123,3 @@ var onBridgeReady = function () {
 try{document.addEventListener('WeixinJSBridgeReady', function() {
     onBridgeReady();
 });}catch(e){};
-
-// $(window).on('scroll.elasticity',
-// function(e) {
-//     e.preventDefault();
-// }).on('touchmove.elasticity',
-// function(e) {
-//     e.preventDefault();
-// });
-
-//页面统计
-if(typeof(pgvMain) == 'function'){pgvMain();}

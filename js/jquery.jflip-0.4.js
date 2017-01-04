@@ -84,7 +84,7 @@ var screenH = document.documentElement.clientHeight,
       ctx = canvas[0].getContext("2d"),
       loaded = 0;
       var bgImg = new Image();  
-          bgImg.src = "http://game.gtimg.cn/images/up/act/a20160318paper/bg.jpg";
+          bgImg.src = "images/bg.jpg";
       // bgImg.onload = function(){
       //   bgInit = true;
       // }      
@@ -268,7 +268,7 @@ var screenH = document.documentElement.clientHeight,
       },false);
       mainP.addEventListener('touchend', function (e) {
           if(count_data.touchStartX>=middlev){
-                if(nowPage<7){
+                if(nowPage<5){
                     onCorner = true;
                     sideLeft = false;
                     if(changeValue){
@@ -288,7 +288,6 @@ var screenH = document.documentElement.clientHeight,
                 //   $(".share-bg").show();
                 //   $(".share-tips").show();                    
                 // } 
-                pgvSendClick({hottag:'up2016.a20160318paper.nextpage'});
           }else{
             if(nowPage>1){
                 onCorner = true;
@@ -306,11 +305,10 @@ var screenH = document.documentElement.clientHeight,
                     clearTimeout(delayTimer)
                 }                    
             } 
-            if(nowPage != 7){
+            if(nowPage != 5){
                   $(".share-bg").hide();
                   $(".share-tips").hide();               
             }
-            pgvSendClick({hottag:'up2016.a20160318paper.prevpage'});
           }                                 
           if(nowPage == 1){
             clearInterval(aniTimer1);
@@ -325,6 +323,7 @@ var screenH = document.documentElement.clientHeight,
             clearInterval(aniTimer11);
           }
           if(nowPage == 4){
+            $(".fy-tips").hide();
             clearInterval(aniTimer7);
             clearInterval(aniTimer8);
           }
@@ -333,55 +332,6 @@ var screenH = document.documentElement.clientHeight,
             clearInterval(aniTimer13);
             clearInterval(aniTimer14);
           }
-          if(nowPage == 6){
-            $(".fy-tips").hide();
-            clearInterval(aniTimer4);
-            clearInterval(aniTimer5);
-            clearInterval(aniTimer6);
-          }
-          if (nowPage == 7) {
-            // clearInterval(aniTimer4);
-            // clearInterval(aniTimer5);
-            // clearInterval(aniTimer6);
-          };
-          // if(moveXcount<-50||moveXcount>50){
-          //     if(moveXcount<-50){ 
-          //       if(nowPage<7){
-          //           onCorner = true;
-          //           sideLeft = false;
-          //           if(changeValue){
-          //               changeValue = false;
-          //               setTimeout(function(){
-          //                   showCanvas();
-          //                   setTimeout(function(){
-          //                       hideSec()
-          //                   }, 30)
-          //               }, 30)
-          //               c.click();
-          //               //$(".fy-tips").hide();
-          //               clearTimeout(delayTimer)
-          //           }                    
-          //       } 
-          //     }
-          //     // if(moveXcount>50){ 
-          //    //      return;
-          //    //      onCorner = true;   
-          //     //     sideLeft = true;                    
-          //    //        if(changeValue){
-          //    //            changeValue = false;
-          //    //            setTimeout(function(){
-          //    //                showCanvas();
-          //    //                setTimeout(function(){
-          //    //                    hideSec()
-          //    //                }, 50)
-          //    //            }, 50)
-          //    //            c.click();
-          //    //            clearTimeout(delayTimer)
-          //    //        }       
-          //     // }
-          // }else{ 
-          //     return         
-          // }
           count_data.touchStartX= 0;
           count_data.touchEndX = 0;
           count_data.moveX = 0;
@@ -405,7 +355,7 @@ var screenH = document.documentElement.clientHeight,
             $("#sec"+nowPage).removeClass('z5');
             nowPage--;
             if(nowPage<1){
-                nowPage = 7
+                nowPage = 5
             }
             $("#sec"+nowPage).addClass('z5');
             images.unshift(images.pop());
@@ -414,7 +364,7 @@ var screenH = document.documentElement.clientHeight,
           } else {
             $("#sec"+nowPage).removeClass('z5');
             nowPage++;
-            if(nowPage>7){
+            if(nowPage>5){
                 nowPage = 1;
             }
             $("#sec"+nowPage).addClass('z5');
@@ -622,17 +572,8 @@ var screenH = document.documentElement.clientHeight,
             //ctx.drawImage(images[6],0,0,screenW,screenH);  
             // ctx.drawImage(img,(width-img.width/2*ss*0.875)/2-img.width/2*ss*0.875*0.015,(height-img.height/2*ss*0.875)/2-img.height/2*ss*0.875*0.01,img.width/2*ss*0.875*ratio,img.height/2*ss*0.875*ratio);
 
-
-
-
             ctx.drawImage(bgImg,0,0,screenW*ratio,screenH*ratio);        
             ctx.drawImage(img,(width*ratio-img.width/2*ss*0.875*ratio)/2-img.width/2*ss*0.875*0.015*ratio,(height*ratio-img.height/2*ss*0.875*ratio)/2-img.height/2*ss*0.875*0.01*ratio,img.width/2*ss*0.875*ratio,img.height/2*ss*0.875*ratio);
-              // lv = (width*ratio-img.width/2*ss*0.875*ratio)/2-img.width/2*ss*0.875*0.015*ratio;
-              // tv = (height*ratio-img.height/2*ss*0.875*ratio)/2-img.height/2*ss*0.875*0.01*ratio;
-              // $(".section").css({
-              //   "top":tv/2,
-              //   "left":lv/2
-              // })
 
             ctx.restore();
             if($.browser.safari || $.browser.opera) {
@@ -732,7 +673,6 @@ function aniJudg(){
       // clearInterval(aniTimer2);
       // clearInterval(aniTimer3);
       picAniA("sec1-2",112,72,18,150);//1
-      pgvSendClick({hottag:'up2016.a20160318paper.toppage1'});
     }
     if(nowPage == 2){
       $(".fy-tips").show();
@@ -743,7 +683,6 @@ function aniJudg(){
       // clearInterval(aniTimer10);
       picAniB("sec2-1",186,174,26,120);//2
       picAniC("sec2-2",91,137,26,120);//3
-      pgvSendClick({hottag:'up2016.a20160318paper.toppage2'});
     }
     if(nowPage == 3){
       $(".fy-tips").show();
@@ -755,7 +694,6 @@ function aniJudg(){
       picAniI("sec3-1",187,109,51,100);//9
       picAniJ("sec3-2",283,75,20,140);//10
       picAniK("sec3-3",91,64,24,130);//11
-      pgvSendClick({hottag:'up2016.a20160318paper.toppage3'});
     }
     if(nowPage == 4){
       $(".fy-tips").show();
@@ -768,39 +706,14 @@ function aniJudg(){
       // clearInterval(aniTimer14);
       picAniG("sec4-1",282,76,51,100);//7
       picAniH("sec4-2",90,54,4,800);//8
-      pgvSendClick({hottag:'up2016.a20160318paper.toppage4'});
     }
     if(nowPage == 5){
-      $(".fy-tips").show();
+      $(".fy-tips").hide();
       $("#sec5 .pic").hide();
-      // clearInterval(aniTimer7);
-      // clearInterval(aniTimer8);
-      // clearInterval(aniTimer4);
-      // clearInterval(aniTimer5);
-      // clearInterval(aniTimer6);
       picAniL("sec5-1",282,109,6,800);//12
       picAniM("sec5-2",91,51,26,120);//13
       picAniN("sec5-3",90,64,26,120);//14
-      pgvSendClick({hottag:'up2016.a20160318paper.toppage5'});
     }
-    if(nowPage == 6){
-      $(".fy-tips").show();
-      $("#sec6 .pic").hide();
-      // clearInterval(aniTimer9);
-      // clearInterval(aniTimer10);
-      // clearInterval(aniTimer11);
-      picAniD("sec6-1",186,120,46,100);//4
-      picAniE("sec6-2",90,103,26,120);//5
-      picAniF("sec6-3",91,65,51,100);//6      
-      pgvSendClick({hottag:'up2016.a20160318paper.toppage6'});
-    }
-    if (nowPage == 7) {
-      $(".fy-tips").hide();
-      // clearInterval(aniTimer4);
-      // clearInterval(aniTimer5);
-      // clearInterval(aniTimer6);      
-      pgvSendClick({hottag:'up2016.a20160318paper.toppage7'});
-    };
 }
 
 // $("#sec1 .pic").hide();
@@ -1032,93 +945,3 @@ function picAniN(id,w,h,n,speed){
     }
     aniTimer14 = setInterval(personAni,speed);
 }
-
-// var aniData = [{
-//   "id":"#sec1-1",
-//   "width":112,
-//   "len":18,
-//   "speed":100},
-//   {
-//   "id":"#sec2-1",
-//   "width":112,
-//   "len":18,
-//   "speed":100},
-//   {
-//   "id":"#sec2-2",
-//   "width":112,
-//   "len":18,
-//   "speed":100},
-//   {
-//   "id":"#sec3-1",
-//   "width":112,
-//   "len":18,
-//   "speed":100},
-//   {
-//   "id":"#sec3-2",
-//   "width":112,
-//   "len":18,
-//   "speed":100},
-//   {
-//   "id":"#sec3-3",
-//   "width":112,
-//   "len":18,
-//   "speed":100},
-//   {
-//   "id":"#sec4-1",
-//   "width":112,
-//   "len":18,
-//   "speed":100},
-//   {
-//   "id":"#sec4-2",
-//   "width":112,
-//   "len":18,
-//   "speed":100},
-//   {
-//   "id":"#sec5-1",
-//   "width":112,
-//   "len":18,
-//   "speed":100},
-//   {
-//   "id":"#sec5-2",
-//   "width":112,
-//   "len":18,
-//   "speed":100},
-//   {
-//   "id":"#sec5-5",
-//   "width":112,
-//   "len":18,
-//   "speed":100},
-//   {
-//   "id":"#sec6-1",
-//   "width":112,
-//   "len":18,
-//   "speed":100},
-//   {
-//   "id":"#sec6-2",
-//   "width":112,
-//   "len":18,
-//   "speed":100},
-//   {
-//   "id":"#sec6-3",
-//   "width":112,
-//   "len":18,
-//   "speed":100}];
-// function positionAni(id,wid,num){
-//     $(id).attr({"style":"background-position:-"+wid*aN+"px 0px"});
-//     aN++;
-//     if(aN == num){
-//         aN=0
-//     }
-// }
-// function picAniA(o){  
-//   var id = aniData[o]["id"],
-//       wid = aniData[o]["width"],
-//       num = aniData[o]["len"],
-//       speed = aniData[o]["speed"];
-//   if(o == 0){
-//     aniTimer1 = setInterval(positionAni(aniData[o]["id"],aniData[o]["id"],aniData[o]["id"] ),speed);
-//   }
-// }
-
-
-

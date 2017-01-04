@@ -68,15 +68,7 @@ input,select,option{outline:none}
 	background-size: 285px 499px;	
 }
 .main-5{
-	background: url(http://game.gtimg.cn/images/up/act/a20160318paper/sec_5_none.png) center top no-repeat;
-	background-size: 285px 499px;	
-}
-.main-6{
-	background: url(http://game.gtimg.cn/images/up/act/a20160318paper/sec_6_none.png) center top no-repeat;
-	background-size: 285px 499px;	
-}
-.main-7{
-	background: url(http://game.gtimg.cn/images/up/act/a20160318paper/sec_7.png) center top no-repeat;
+	background: url(../images/sec5-bg-none.jpg) center top no-repeat;
 	background-size: 285px 499px;	
 }
 
@@ -237,76 +229,6 @@ input,select,option{outline:none}
         -webkit-transform:scale(1);
     }
 }
-.main-1 .sec-2{
-	width: 112px;
-	height: 72px;
-	top: 367px;
-	left: 171px;
-	background: url(http://game.gtimg.cn/images/up/act/a20160318paper/pic/sec_1_2.jpg) 0 0 no-repeat;
-	background-size: 2016px 72px
-}
-/*main-2*/
-.main-2 .sec-1{
-	/*width: 186px;
-	height: 174px;
-	top: 104px;
-	left: 1px;
-	background: url(http://game.gtimg.cn/images/up/act/a20160318paper/pic/sec_2_1.jpg) 0 0 no-repeat;
-	background-size: 4836px 174px*/
-}
-.main-2 .sec-2{
-	/*width: 91px;
-	height: 137px;
-	top: 290px;
-	left: 193px;
-	background: url(http://game.gtimg.cn/images/up/act/a20160318paper/pic/sec_2_2.jpg) 0 0 no-repeat;
-	background-size: 2366px 137px*/
-}
-
-
-/*main-4*/
-.main-4 .sec-1{
-	/*width: 282px;
-	height: 76px;
-	top: 198px;
-	left: 1px;
-	background: url(http://game.gtimg.cn/images/up/act/a20160318paper/pic/sec_4_1.jpg) 0 0 no-repeat;
-	background-size: 14382px 76px*/
-}
-.main-4 .sec-2{
-	/*width: 90px;
-	height: 37px;
-	top: 436px;
-	left: 1px;
-	background: url(http://game.gtimg.cn/images/up/act/a20160318paper/pic/sec_4_2.jpg) 0 0 no-repeat;
-	background-size: 360px 37px*/
-}
-
-/*main-5*/
-/*.main-3 .sec-1{
-	width: 187px;
-	height: 109px;
-	top: 117px;
-	left: 97px;
-	background: url(http://game.gtimg.cn/images/up/act/a20160318paper/pic/sec_5_1.jpg) 0 0 no-repeat;
-	background-size: 9537px 109px
-}
-.main-3 .sec-2{
-	width: 283px;
-	height: 75px;
-	top: 232px;
-	left: 1px;
-	background: url(http://game.gtimg.cn/images/up/act/a20160318paper/pic/sec_5_2.jpg) 0 0 no-repeat;
-	background-size: 5660px 75px
-}
-.main-3 .sec-3{
-	width: 90px;
-	height: 64px;
-	top: 404px;
-	left: 1px;
-	background: url(http://game.gtimg.cn/images/up/act/a20160318paper/pic/sec_5_3.jpg) 0 0 no-repeat;
-	background-size: 2184px 64px
-}*/
 @-webkit-keyframes tAni1{
     0%{ 
         -webkit-transform:translate(0,0);
@@ -355,85 +277,78 @@ input,select,option{outline:none}
         -webkit-transform:translate(-400px,0);
     }
 }
-/*main-5*/
-.main-5 .sec-1{
-	width: 282px;
-	height: 109px;
-	top: 136px;
+.main-1 .sec-2{
+	width: 112px;
+	height: 72px;
+	top: 367px;
+	left: 171px;
+	background: url(http://game.gtimg.cn/images/up/act/a20160318paper/pic/sec_1_2.jpg) 0 0 no-repeat;
+	background-size: 2016px 72px
+}
+/*main-2*/
+.main-2 .sec-1{
+	/*width: 186px;
+	height: 174px;
+	top: 104px;
 	left: 1px;
-	background: url(http://game.gtimg.cn/images/up/act/a20160318paper/pic/sec_6_1.jpg) 0 0 no-repeat;
-	background-size: 1692px 109px
+	background: url(http://game.gtimg.cn/images/up/act/a20160318paper/pic/sec_2_1.jpg) 0 0 no-repeat;
+	background-size: 4836px 174px*/
 }
-.main-5 .sec-2{
-	width: 91px;
-	height: 51px;
-	top: 343px;
-	left: 192px;
-	background: url(http://game.gtimg.cn/images/up/act/a20160318paper/pic/sec_6_2.jpg) 0 0 no-repeat;
-	background-size: 2366px 51px
-}
-.main-5 .sec-3{
-	width: 90px;
-	height: 64px;
-	top: 404px;
-	left: 1px;
-	background: url(http://game.gtimg.cn/images/up/act/a20160318paper/pic/sec_6_3.jpg) 0 0 no-repeat;
-	background-size: 2340px 64px
-}
-/*main-6*/
-.main-6 .sec-1{
-	width: 186px;
-	height: 120px;
-	top: 68px;
-	left: 1px;
-	background: url(http://game.gtimg.cn/images/up/act/a20160318paper/pic/sec_3_1.jpg) 0 0 no-repeat;
-	background-size: 7998px 120px
-}
-.main-6 .sec-2{
-	width: 90px;
-	height: 103px;
-	top: 289px;
+.main-2 .sec-2{
+	/*width: 91px;
+	height: 137px;
+	top: 290px;
 	left: 193px;
-	background: url(http://game.gtimg.cn/images/up/act/a20160318paper/pic/sec_3_2.jpg) 0 0 no-repeat;
-	background-size: 2340px 103px
-}
-.main-6 .sec-3{
-	width: 91px;
-	height: 65px;
-	top: 404px;
-	left: 1px;
-	background: url(http://game.gtimg.cn/images/up/act/a20160318paper/pic/sec_3_3.jpg) 0 0 no-repeat;
-	background-size: 4641px 65px
+	background: url(http://game.gtimg.cn/images/up/act/a20160318paper/pic/sec_2_2.jpg) 0 0 no-repeat;
+	background-size: 2366px 137px*/
 }
 
-/*main-7*/
-.main-7 .sec-1{
-	width: 80px;
+
+/*main-4*/
+.main-4 .sec-1{
+	/*width: 282px;
+	height: 76px;
+	top: 198px;
+	left: 1px;
+	background: url(http://game.gtimg.cn/images/up/act/a20160318paper/pic/sec_4_1.jpg) 0 0 no-repeat;
+	background-size: 14382px 76px*/
+}
+.main-4 .sec-2{
+	/*width: 90px;
+	height: 37px;
+	top: 436px;
+	left: 1px;
+	background: url(http://game.gtimg.cn/images/up/act/a20160318paper/pic/sec_4_2.jpg) 0 0 no-repeat;
+	background-size: 360px 37px*/
+}
+/*main-5*/
+.main-5 .sec-1{
+	/*width: 80px;
 	height: 110px;
 	top: 100px;
 	left: 107px;
 	background: url(http://game.gtimg.cn/images/up/act/a20160318paper/sec_7_1.png) 0 0 no-repeat;
 	background-size: 80px 110px;
-	opacity: 0;
+	opacity: 0;*/
 }
-.main-7 .sec-2{
-	width: 40px;
+.main-5 .sec-2{
+/*	width: 40px;
 	height: 150px;
 	top: 233px;
 	left: 120px;
 	background: url(http://game.gtimg.cn/images/up/act/a20160318paper/sec_7_2.png) 0 0 no-repeat;
 	background-size: 40px 150px;
-	opacity: 0;
+	opacity: 0;*/
 }
-.main-7 .sec-3{
-	width: 200px;
+.main-5 .sec-3{
+	/*width: 200px;
 	height: 70px;
 	bottom: 20px;
 	left: 50%;
 	margin-left: -100px;
 	background: url(http://game.gtimg.cn/images/up/act/a20160318paper/sec_7_3.png) center bottom no-repeat;
 	background-size: 135px 35px;
-	opacity: 0;
+	opacity: 0;*/
 }
 .share-tips{
 	width: 14px;
@@ -453,13 +368,13 @@ input,select,option{outline:none}
 	opacity: 0.6;
 	z-index: 20;
 }
-.z5 .main-7 .sec-1{
+.z5 .main-5 .sec-1{
 	-webkit-animation: opShow .3s ease-in forwards;
 }
-.z5 .main-7 .sec-2{
+.z5 .main-5 .sec-2{
 	-webkit-animation: opShow .7s .3s ease-in forwards;
 }
-.z5 .main-7 .sec-3{
+.z5 .main-5 .sec-3{
 	-webkit-animation: opShow .7s 1s ease-in forwards;
 }
 @-webkit-keyframes opShow{
@@ -477,7 +392,3 @@ input,select,option{outline:none}
 
 
 .flip-box{width: 100%;height: 100%;top: 0;left: 0;z-index: 9}
-
-
-
-/*.shadow{width: 100%;height: 100%;top: 0;left: 0;z-index: 9;background: url(http://game.gtimg.cn/images/up/act/a20160318paper/shadow.png) right bottom no-repeat;z-index: 10;background-size: cover}*/
