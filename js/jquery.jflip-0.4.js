@@ -323,11 +323,12 @@ var screenH = document.documentElement.clientHeight,
             clearInterval(aniTimer11);
           }
           if(nowPage == 4){
-            $(".fy-tips").hide();
+            
             clearInterval(aniTimer7);
             clearInterval(aniTimer8);
           }
           if(nowPage == 5){
+            $(".fy-tips").hide();
             clearInterval(aniTimer12);
             clearInterval(aniTimer13);
             clearInterval(aniTimer14);
