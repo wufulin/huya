@@ -35,10 +35,10 @@ input,select,option{outline:none}
 }
 @-webkit-keyframes fyAni{
     0%{ 
-        -webkit-transform: translate3d(8px,5px,2px);
+        -webkit-transform: translate3d(0px,0px,0px);
     }
     100%{ 
-        -webkit-transform: translate3d(0px,0px,0px);
+        -webkit-transform: translate3d(-4px,-2px,-1px);
     }
 }
 .main{
@@ -52,23 +52,19 @@ input,select,option{outline:none}
 	height: 100%
 }
 .main-1{
-	background: url(../images/sec1-bg-none.jpg) center top no-repeat;
+	background: url(../images/sec1-bg-none.png) center top no-repeat;
 	background-size: 285px 499px;	
 }
 .main-2{
-	background: url(../images/sec2-bg-none.jpg) center top no-repeat;
+	background: url(../images/sec2-bg-none.png) center top no-repeat;
 	background-size: 285px 499px;	
 }
 .main-3{
-	background: url(../images/sec3-bg-none.jpg) center top no-repeat;
+	background: url(../images/sec3-bg-none.png) center top no-repeat;
 	background-size: 285px 499px;	
 }
 .main-4{
-	background: url(../images/sec4-bg-none.jpg) center top no-repeat;
-	background-size: 285px 499px;	
-}
-.main-5{
-	background: url(../images/sec5-bg-none.jpg) center top no-repeat;
+	background: url(../images/sec4-bg-none.png) center top no-repeat;
 	background-size: 285px 499px;	
 }
 
@@ -82,13 +78,13 @@ input,select,option{outline:none}
 }
 .main-1 .slogan .slogan-logo{
 	opacity: 0;
-	width: 150px;
-	height: 150px;
-	top: 45px;
+	width: 140px;
+	height: 160px;
+	top: 5px;
 	left: 50%;
 	margin-left: -75px;
 	background: url(../images/slogan-logo.png) 0 0 no-repeat;
-	background-size: 150px 150px;
+	background-size: 140px 160px;
 }
 .main-1 .slogan .slogan-txt1{
 	opacity: 0;
@@ -188,11 +184,11 @@ input,select,option{outline:none}
     }
     20%{ 
         opacity: 0;
-        -webkit-transform:translate(0,,5px);
+        -webkit-transform:translate(0,5px);
     }
     40%{ 
         opacity: 0;
-        -webkit-transform:translate(0,,5px);
+        -webkit-transform:translate(0,5px);
     }
     60%{ 
         opacity: 1;
@@ -349,24 +345,6 @@ input,select,option{outline:none}
 	background: url(http://game.gtimg.cn/images/up/act/a20160318paper/sec_7_3.png) center bottom no-repeat;
 	background-size: 135px 35px;
 	opacity: 0;*/
-}
-.share-tips{
-	width: 14px;
-	height: 140px;
-	top: 2px;
-	right: 23px;
-	background: url(http://game.gtimg.cn/images/up/act/a20160318paper/share_tips.png) 0 0 no-repeat;
-	background-size: cover;
-	z-index: 30;
-}
-.share-bg{
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left:0; 
-	background: #000;
-	opacity: 0.6;
-	z-index: 20;
 }
 .z5 .main-5 .sec-1{
 	-webkit-animation: opShow .3s ease-in forwards;

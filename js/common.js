@@ -36,15 +36,15 @@ function pageScale(){
         }
     }   
     //$(".main").css({"-webkit-transform":"translate3d(-51.5%,-51%,0) scale("+ss*0.875+")"});
-    $(".main").css({"-webkit-transform":"scale("+ss*0.875+")"});
+    $(".main").css({"-webkit-transform":"scale("+ss*1+")"});
 };
 $(".loading").css({
     "width":screenW,
     "height":screenH
-})
+});
 
 var basePath = "images/";
-var loadingArr = ["sec1-bg.jpg","sec2-bg.jpg","sec3-bg.jpg","sec4-bg.jpg","sec5-bg.jpg","sec1-bg-none.jpg","sec2-bg-none.jpg","sec3-bg-none.jpg","sec4-bg-none.jpg","sec5-bg-none.jpg"];
+var loadingArr = ["sec1-bg.png","sec2-bg.png","sec3-bg.png","sec4-bg.png","sec1-bg-none.png","sec2-bg-none.png","sec3-bg-none.png","sec4-bg-none.png"];
 var firstImgLoadArr = [];
 for (var i = 0; i < loadingArr.length; i++) {
     loadingArr[i] = basePath + loadingArr[i];

@@ -12,7 +12,7 @@ var screenH = document.documentElement.clientHeight,
     screenW = document.documentElement.clientWidth,
     middlev = parseInt(screenW/2),
     ss = 0,
-    page = 5,
+    page = 4,
     nowPage = 1,
     moveXcount = 0,
     changeValue = true,
@@ -265,7 +265,7 @@ var screenH = document.documentElement.clientHeight,
         },false);
         mainP.addEventListener('touchend', function (e) {
             if(count_data.touchStartX>=middlev){
-                if(nowPage<5){
+                if(nowPage<4){
                     onCorner = true;
                     sideLeft = false;
                     if(changeValue){
@@ -302,7 +302,7 @@ var screenH = document.documentElement.clientHeight,
                         clearTimeout(delayTimer)
                     }
                 }
-                if(nowPage != 5){
+                if(nowPage != 4){
                     $(".share-bg").hide();
                     $(".share-tips").hide();
                 }
@@ -320,15 +320,9 @@ var screenH = document.documentElement.clientHeight,
                 clearInterval(aniTimer11);
             }
             if(nowPage == 4){
-
+                $(".fy-tips").hide();
                 clearInterval(aniTimer7);
                 clearInterval(aniTimer8);
-            }
-            if(nowPage == 5){
-                $(".fy-tips").hide();
-                clearInterval(aniTimer12);
-                clearInterval(aniTimer13);
-                clearInterval(aniTimer14);
             }
             count_data.touchStartX= 0;
             count_data.touchEndX = 0;
@@ -353,7 +347,7 @@ var screenH = document.documentElement.clientHeight,
                         $("#sec"+nowPage).removeClass('z5');
                         nowPage--;
                         if(nowPage<1){
-                            nowPage = 5
+                            nowPage = 4
                         }
                         $("#sec"+nowPage).addClass('z5');
                         images.unshift(images.pop());
@@ -362,7 +356,7 @@ var screenH = document.documentElement.clientHeight,
                     } else {
                         $("#sec"+nowPage).removeClass('z5');
                         nowPage++;
-                        if(nowPage>5){
+                        if(nowPage>4){
                             nowPage = 1;
                         }
                         $("#sec"+nowPage).addClass('z5');
@@ -451,13 +445,14 @@ var screenH = document.documentElement.clientHeight,
                 //ctx.drawImage(images[6],0,0,screenW,screenH);
                 ctx.drawImage(bgImg,0,0,screenW*ratio,screenH*ratio);
                 var img = images[0], r = $(img).data("flip.scale");
-                //ctx.drawImage(img,(width-img.width/2*ss*0.875)/2-img.width/2*ss*0.875*0.015,(height-img.height/2*ss*0.875)/2-img.height/2*ss*0.875*0.01,img.width/2*ss*0.875*ratio,img.height/2*ss*0.875*ratio);
-                ctx.drawImage(img,(width*ratio-img.width/2*ss*0.875*ratio)/2-img.width/2*ss*0.875*0.015*ratio,(height*ratio-img.height/2*ss*0.875*ratio)/2-img.height/2*ss*0.875*0.01*ratio,img.width/2*ss*0.875*ratio,img.height/2*ss*0.875*ratio);
-                lv = (width-img.width/2*ss*0.875)/2-img.width/2*ss*0.875*0.015;
-                tv = (height-img.height/2*ss*0.875)/2-img.height/2*ss*0.875*0.01;
+                //ctx.drawImage(img,(width-img.width/2*ss*1)/2-img.width/2*ss*1*0.015,(height-img.height/2*ss*1)/2-img.height/2*ss*1*0.01,img.width/2*ss*1*ratio,img.height/2*ss*1*ratio);
+                ctx.drawImage(img,0,0,
+                    img.width/2*ss*1*ratio,img.height/2*ss*1*ratio);
+                lv = (width-img.width/2*ss*1)/2-img.width/2*ss*1*0.015;
+                tv = (height-img.height/2*ss*1)/2-img.height/2*ss*1*0.01;
                 $(".section").css({
-                    "top":tv,
-                    "left":lv
+                    "top":0,
+                    "left":0
                 })
 
                 if(mY && mX!=width) {
@@ -568,10 +563,13 @@ var screenH = document.documentElement.clientHeight,
                         //ctx.drawImage(img,(width-img.width)/2,(height-img.height)/2);
 
                         //ctx.drawImage(images[6],0,0,screenW,screenH);
-                        // ctx.drawImage(img,(width-img.width/2*ss*0.875)/2-img.width/2*ss*0.875*0.015,(height-img.height/2*ss*0.875)/2-img.height/2*ss*0.875*0.01,img.width/2*ss*0.875*ratio,img.height/2*ss*0.875*ratio);
+                        // ctx.drawImage(img,(width-img.width/2*ss*1)/2-img.width/2*ss*1*0.015,(height-img.height/2*ss*1)/2-img.height/2*ss*1*0.01,img.width/2*ss*1*ratio,img.height/2*ss*1*ratio);
 
                         ctx.drawImage(bgImg,0,0,screenW*ratio,screenH*ratio);
-                        ctx.drawImage(img,(width*ratio-img.width/2*ss*0.875*ratio)/2-img.width/2*ss*0.875*0.015*ratio,(height*ratio-img.height/2*ss*0.875*ratio)/2-img.height/2*ss*0.875*0.01*ratio,img.width/2*ss*0.875*ratio,img.height/2*ss*0.875*ratio);
+                        ctx.drawImage(img,
+                            0,0,
+                            img.width/2*ss*1*ratio,
+                            img.height/2*ss*1*ratio);
 
                         ctx.restore();
                         if($.browser.safari || $.browser.opera) {
@@ -673,7 +671,7 @@ function aniJudg(){
         picAniK("sec3-3",91,64,24,130);//11
     }
     if(nowPage == 4){
-        $(".fy-tips").show();
+        $(".fy-tips").hide();
         $("#sec4 .pic").hide();
         // clearInterval(aniTimer9);
         // clearInterval(aniTimer10);
@@ -684,19 +682,7 @@ function aniJudg(){
         picAniG("sec4-1",282,76,51,100);//7
         picAniH("sec4-2",90,54,4,800);//8
     }
-    if(nowPage == 5){
-        $(".fy-tips").hide();
-        $("#sec5 .pic").hide();
-        picAniL("sec5-1",282,109,6,800);//12
-        picAniM("sec5-2",91,51,26,120);//13
-        picAniN("sec5-3",90,64,26,120);//14
-    }
 }
-
-// $("#sec1 .pic").hide();
-// picAni("sec1-2",112,72,18,100); 
-
-
 
 function picAniA(id,w,h,n,speed){
     var box = $("#"+id),
