@@ -52,7 +52,7 @@ input,select,option{outline:none}
 	height: 100%
 }
 .main-1{
-	background: url(../images/sec1-bg-none.png) center top no-repeat;
+	background: url(../images/sec1-bg.png) center top no-repeat;
 	background-size: 285px 499px;	
 }
 .main-2{
@@ -283,69 +283,52 @@ input,select,option{outline:none}
 }
 /*main-2*/
 .main-2 .sec-1{
-	/*width: 186px;
-	height: 174px;
-	top: 104px;
-	left: 1px;
-	background: url(http://game.gtimg.cn/images/up/act/a20160318paper/pic/sec_2_1.jpg) 0 0 no-repeat;
-	background-size: 4836px 174px*/
+	width: 250px;
+	height: 144px;
+	top: 123px;
+	left: 16px;
 }
 .main-2 .sec-2{
-	/*width: 91px;
-	height: 137px;
-	top: 290px;
-	left: 193px;
-	background: url(http://game.gtimg.cn/images/up/act/a20160318paper/pic/sec_2_2.jpg) 0 0 no-repeat;
-	background-size: 2366px 137px*/
+	width: 133px;
+	height: 175px;
+	top: 278px;
+	left: 132px;
 }
 
+/*main-3*/
+.main-3 .sec-1{
+    width: 119px;
+    height: 193px;
+    top: 98px;
+    left: 15px;
+}
+.main-3 .sec-2{
+    width: 123px;
+    height: 54px;
+    top: 230px;
+    left: 140px;
+}
+.main-3 .sec-3{
+    width: 247px;
+    height: 92px;
+    top: 380px;
+    left: 16px;
+}
 
 /*main-4*/
 .main-4 .sec-1{
-	/*width: 282px;
-	height: 76px;
-	top: 198px;
-	left: 1px;
-	background: url(http://game.gtimg.cn/images/up/act/a20160318paper/pic/sec_4_1.jpg) 0 0 no-repeat;
-	background-size: 14382px 76px*/
+	width: 250px;
+	height: 116px;
+	top: 182px;
+	left: 15px;
 }
 .main-4 .sec-2{
-	/*width: 90px;
-	height: 37px;
-	top: 436px;
-	left: 1px;
-	background: url(http://game.gtimg.cn/images/up/act/a20160318paper/pic/sec_4_2.jpg) 0 0 no-repeat;
-	background-size: 360px 37px*/
+	width: 183px;
+	height: 56px;
+	top: 359px;
+	left: 84px;
 }
-/*main-5*/
-.main-5 .sec-1{
-	/*width: 80px;
-	height: 110px;
-	top: 100px;
-	left: 107px;
-	background: url(http://game.gtimg.cn/images/up/act/a20160318paper/sec_7_1.png) 0 0 no-repeat;
-	background-size: 80px 110px;
-	opacity: 0;*/
-}
-.main-5 .sec-2{
-/*	width: 40px;
-	height: 150px;
-	top: 233px;
-	left: 120px;
-	background: url(http://game.gtimg.cn/images/up/act/a20160318paper/sec_7_2.png) 0 0 no-repeat;
-	background-size: 40px 150px;
-	opacity: 0;*/
-}
-.main-5 .sec-3{
-	/*width: 200px;
-	height: 70px;
-	bottom: 20px;
-	left: 50%;
-	margin-left: -100px;
-	background: url(http://game.gtimg.cn/images/up/act/a20160318paper/sec_7_3.png) center bottom no-repeat;
-	background-size: 135px 35px;
-	opacity: 0;*/
-}
+
 .z5 .main-5 .sec-1{
 	-webkit-animation: opShow .3s ease-in forwards;
 }

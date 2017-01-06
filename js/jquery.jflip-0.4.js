@@ -446,13 +446,12 @@ var screenH = document.documentElement.clientHeight,
                 ctx.drawImage(bgImg,0,0,screenW*ratio,screenH*ratio);
                 var img = images[0], r = $(img).data("flip.scale");
                 //ctx.drawImage(img,(width-img.width/2*ss*1)/2-img.width/2*ss*1*0.015,(height-img.height/2*ss*1)/2-img.height/2*ss*1*0.01,img.width/2*ss*1*ratio,img.height/2*ss*1*ratio);
-                ctx.drawImage(img,0,0,
-                    img.width/2*ss*1*ratio,img.height/2*ss*1*ratio);
-                lv = (width-img.width/2*ss*1)/2-img.width/2*ss*1*0.015;
-                tv = (height-img.height/2*ss*1)/2-img.height/2*ss*1*0.01;
+               ctx.drawImage(img,(width*ratio-img.width/2*ss*0.875*ratio)/2-img.width/2*ss*0.875*0.015*ratio,(height*ratio-img.height/2*ss*0.875*ratio)/2-img.height/2*ss*0.875*0.01*ratio,img.width/2*ss*0.875*ratio,img.height/2*ss*0.875*ratio);
+                lv = (width-img.width/2*ss*0.875)/2-img.width/2*ss*0.875*0.015;
+                tv = (height-img.height/2*ss*0.875)/2-img.height/2*ss*0.875*0.01;
                 $(".section").css({
-                    "top":0,
-                    "left":0
+                    "top":tv,
+                    "left":lv
                 })
 
                 if(mY && mX!=width) {
@@ -566,10 +565,7 @@ var screenH = document.documentElement.clientHeight,
                         // ctx.drawImage(img,(width-img.width/2*ss*1)/2-img.width/2*ss*1*0.015,(height-img.height/2*ss*1)/2-img.height/2*ss*1*0.01,img.width/2*ss*1*ratio,img.height/2*ss*1*ratio);
 
                         ctx.drawImage(bgImg,0,0,screenW*ratio,screenH*ratio);
-                        ctx.drawImage(img,
-                            0,0,
-                            img.width/2*ss*1*ratio,
-                            img.height/2*ss*1*ratio);
+                         ctx.drawImage(img,(width*ratio-img.width/2*ss*0.875*ratio)/2-img.width/2*ss*0.875*0.015*ratio,(height*ratio-img.height/2*ss*0.875*ratio)/2-img.height/2*ss*0.875*0.01*ratio,img.width/2*ss*0.875*ratio,img.height/2*ss*0.875*ratio);
 
                         ctx.restore();
                         if($.browser.safari || $.browser.opera) {
@@ -651,36 +647,36 @@ function aniJudg(){
     }
     if(nowPage == 2){
         $(".fy-tips").show();
-        $("#sec2 .pic").hide();
+        $("#sec2 .pic").show();
         // clearInterval(aniTimer1);
         // clearInterval(aniTimer8);
         // clearInterval(aniTimer9);
         // clearInterval(aniTimer10);
-        picAniB("sec2-1",186,174,26,120);//2
-        picAniC("sec2-2",91,137,26,120);//3
+        // picAniB("sec2-1",186,174,26,120);//2
+        // picAniC("sec2-2",91,137,26,120);//3b
     }
     if(nowPage == 3){
         $(".fy-tips").show();
-        $("#sec3 .pic").hide();
+        $("#sec3 .pic").show();
         // clearInterval(aniTimer2);
         // clearInterval(aniTimer3);
         // clearInterval(aniTimer7);
         // clearInterval(aniTimer8);
-        picAniI("sec3-1",187,109,51,100);//9
-        picAniJ("sec3-2",283,75,20,140);//10
-        picAniK("sec3-3",91,64,24,130);//11
+        // picAniI("sec3-1",187,109,51,100);//9
+        // picAniJ("sec3-2",283,75,20,140);//10
+        // picAniK("sec3-3",91,64,24,130);//11
     }
     if(nowPage == 4){
         $(".fy-tips").hide();
-        $("#sec4 .pic").hide();
+        $("#sec4 .pic").show();
         // clearInterval(aniTimer9);
         // clearInterval(aniTimer10);
         // clearInterval(aniTimer11);
         // clearInterval(aniTimer12);
         // clearInterval(aniTimer13);
         // clearInterval(aniTimer14);
-        picAniG("sec4-1",282,76,51,100);//7
-        picAniH("sec4-2",90,54,4,800);//8
+        // picAniG("sec4-1",282,76,51,100);//7
+        // picAniH("sec4-2",90,54,4,800);//8
     }
 }
 
