@@ -446,9 +446,9 @@ var screenH = document.documentElement.clientHeight,
                 ctx.drawImage(bgImg,0,0,screenW*ratio,screenH*ratio);
                 var img = images[0], r = $(img).data("flip.scale");
                 //ctx.drawImage(img,(width-img.width/2*ss*1)/2-img.width/2*ss*1*0.015,(height-img.height/2*ss*1)/2-img.height/2*ss*1*0.01,img.width/2*ss*1*ratio,img.height/2*ss*1*ratio);
-               ctx.drawImage(img,(width*ratio-img.width/2*ss*0.875*ratio)/2-img.width/2*ss*0.875*0.015*ratio,(height*ratio-img.height/2*ss*0.875*ratio)/2-img.height/2*ss*0.875*0.01*ratio,img.width/2*ss*0.875*ratio,img.height/2*ss*0.875*ratio);
-                lv = (width-img.width/2*ss*0.875)/2-img.width/2*ss*0.875*0.015;
-                tv = (height-img.height/2*ss*0.875)/2-img.height/2*ss*0.875*0.01;
+               ctx.drawImage(img,(width*ratio-img.width/2*ss*0.9*ratio)/2-img.width/2*ss*0.9*0.015*ratio,(height*ratio-img.height/2*ss*0.9*ratio)/2-img.height/2*ss*0.9*0.01*ratio,img.width/2*ss*0.9*ratio,img.height/2*ss*0.9*ratio);
+                lv = (width-img.width/2*ss*0.9)/2-img.width/2*ss*0.9*0.015;
+                tv = (height-img.height/2*ss*0.9)/2-img.height/2*ss*0.9*0.01;
                 $(".section").css({
                     "top":tv,
                     "left":lv
@@ -565,7 +565,11 @@ var screenH = document.documentElement.clientHeight,
                         // ctx.drawImage(img,(width-img.width/2*ss*1)/2-img.width/2*ss*1*0.015,(height-img.height/2*ss*1)/2-img.height/2*ss*1*0.01,img.width/2*ss*1*ratio,img.height/2*ss*1*ratio);
 
                         ctx.drawImage(bgImg,0,0,screenW*ratio,screenH*ratio);
-                         ctx.drawImage(img,(width*ratio-img.width/2*ss*0.875*ratio)/2-img.width/2*ss*0.875*0.015*ratio,(height*ratio-img.height/2*ss*0.875*ratio)/2-img.height/2*ss*0.875*0.01*ratio,img.width/2*ss*0.875*ratio,img.height/2*ss*0.875*ratio);
+                        ctx.drawImage(img,
+                            (width*ratio-img.width/2*ss*0.9*ratio)/2-img.width/2*ss*0.9*0.015*ratio,
+                            (height*ratio-img.height/2*ss*0.9*ratio)/2-img.height/2*ss*0.9*0.01*ratio,
+                            img.width/2*ss*0.9*ratio,
+                            img.height/2*ss*0.9*ratio);
 
                         ctx.restore();
                         if($.browser.safari || $.browser.opera) {

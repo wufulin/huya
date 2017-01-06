@@ -36,7 +36,7 @@ function pageScale(){
         }
     }   
     //$(".main").css({"-webkit-transform":"translate3d(-51.5%,-51%,0) scale("+ss*0.875+")"});
-    $(".main").css({"-webkit-transform":"scale("+ss*0.875+")"});
+    $(".main").css({"-webkit-transform":"scale("+ss*0.9+")"});
 };
 $(".loading").css({
     "width":screenW,
